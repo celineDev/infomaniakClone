@@ -1,0 +1,72 @@
+.container {
+    background-color: var(--ligthGray);
+    height: 96px;
+}
+
+.container > input {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    width: 95%;
+    height: 50px;
+    margin: 20px;
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+.container > input::placeholder {
+    color: #c5c5c5;
+}
+
+.search {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+}
+
+.search > svg {
+    fill: #0098FF;
+    stroke: #0098FF;
+  }
+
+.cross {
+    position: absolute;
+    top: 36px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.hide_for_desktop {
+    display: block;
+}
+
+@media screen and (max-width: 1253px) {
+    .hide_for_desktop {
+        display: block;
+    }
+
+    .container {
+        background: transparent;
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+
+    .container > input {
+        width: 100%;
+        margin: 20px 15px;
+        padding-left: 42px;
+        padding-right: 45px;
+    }
+
+    .search {
+        position: absolute;
+        top: 36px;
+        left: 30px;
+    }
+
+    .cross {
+        position: absolute;
+        top: 36px;
+        right: 30px;
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "lang": {
+        "currentLanguage": "IT",
+        "currentLanguageFull": "Italiano"
+    },
+    "Index": {
+        "title": "Hello italia!"
+    },
+    "navigation": {
+        "products": "Prodotti",
+        "aboutus": "A proposito",
+        "support": "Supporto",
+        "price": "Prezzo",
+        "language": "Lingua"
+    },
+    "switch": {
+        "taxes": "Tasse incluse",
+        "excl": "HT",
+        "incl": "Tasse incluse"
+    },
+    "log": {
+        "signupShort": "Crea un conto",
+        "logginShort": "Accedere",
+        "signup": "Iscrizione",
+        "loggin": "Accesso"
+    }
+}

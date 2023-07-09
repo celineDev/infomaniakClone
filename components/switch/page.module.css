@@ -1,0 +1,41 @@
+.switch {
+    background-color: var(--ligthGray);
+    font-size: 8px;
+    width: 120px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.switch > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    padding: 5px;
+    color: black;
+}
+
+.switch > span {
+    background-color: var(--main-color);
+    color: #fff;
+    width: 59px;
+    height: 21px;
+    border-radius: 25px;
+    position: absolute;
+    top: 2px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1253px) {
+    .switch {
+        margin-right: 15px;
+    }
+}
