@@ -24,7 +24,6 @@
 .nav {
     display: flex;
     align-items: center;
-
 }
 
 .nav ul {
@@ -111,7 +110,6 @@
 
 
 /* ----- collapse Menu -----*/
-
 .collapseMenu,
 .aboutCollapseMenu,
 .supportCollapseMenu {
@@ -148,14 +146,8 @@
 }
 
 .supportCollapseMenu {
-    height: 380px;
+    height: 426px;
 }
-
-/* je souhaite
-.collapseMenu {
-    height: 617px;
-    height: 564px;
-} */
 
 .collapseMenu > li,
 .aboutCollapseMenu > li,
@@ -249,14 +241,6 @@
     width: 1px;
     background-color: var(--ligthGray);
 }
-
-/* .sideMenu::after {
-    height: 647px;
-}
-
-.sideMenu2::after {
-    height: 458px;
-} */
 
 .logoKsuite {
     margin-right: 10px;
@@ -438,7 +422,7 @@
     margin-right: 4px;
 }
 
-/* display menu */
+/* display menu start */
 .leftMenu,
 .aboutContainer {
     display: none;
@@ -454,7 +438,6 @@
     display: grid;
 }
 
-/* .collapseMenu > li:hover .leftMenu, */
 .linkMenu:hover > .collapseMenu > li:first-child .leftMenu,
 .linkMenu:hover > .aboutCollapseMenu > li:first-child > .aboutContainer {
     display: grid;
@@ -475,8 +458,7 @@
 .menu a:hover ~ .supportCollapseMenu > li:first-child {
     width: 370px;
 }
-
-/* display menu */
+/* display menu end */
 
 .actions > p:first-child {
     margin-top: 40px;
@@ -773,53 +755,241 @@
         background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
     }
 
-    .linkMenu {
+    /* .arrowUp {
+        transform: rotate(180deg);
+        transition: all 0.3s ease;
+    }
+
+    .arrowDown {
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    } */
+
+    .linkMenuMobile {
         color: white;
         width: 100%;
-        justify-content: space-between;
+        min-height: 66px;
         cursor: pointer;
     }
 
-    .linkMenu:first-child,
-    .linkMenu:nth-child(2),
-    .linkMenu:nth-child(3) {
+    .linkMenuMobile > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        margin-bottom: 24px;
+    }
+
+    .linkMenuMobile:first-child,
+    .linkMenuMobile:nth-child(2),
+    .linkMenuMobile:nth-child(3) {
         border-bottom: .2px solid rgba(255, 255, 255, .3);
     }
 
-    .linkMenu > a {
+    .linkMenuMobile > div > a {
         margin-left: 15px;
         font-weight: 600;
     }
 
-    .linkMenu > figure > svg {
+    .linkMenuMobile > div > figure > svg {
         fill: white;
         margin-right: 15px;
-
     }
 
-    .linkMenu:hover.linkMenu::after {
-        opacity: 0;
+    .submenu {
+        font-size: 16px;
+        font-weight: 600;
+        background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
     }
 
-    .collapseMenu,
-    .aboutCollapseMenu,
-    .supportCollapseMenu {
-        left: 0px;
+    .submenu > div > li > div > figure > svg > path {
+        fill: white;
+    }
+
+    .submenu > div > li {
+        background-color: var(--dark-blue);
+        padding: 22px 15px;
         display: flex;
+        justify-content: space-between;
+    }
+
+    .kstyleFlex {
+        display: flex;
+        align-items: center;
+    }
+    /* subsubmenu START */
+
+
+    .subContainer {
+        background-color: #fff;
+    }
+    .subColumns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 15px 0;
+        grid-gap: 15px;
+    }
+
+    .vignette > a > h5 > svg,
+    .twoFloors > div > h3 > svg,
+    .svgGuests {
+        width: 16px;
+        height: 16px;
+    }
+
+    .vignette > a > h5 {
+        color: var(--darkestGrey);
+    }
+
+    .vignette > a > p {
+        color: var(--darkGrey);
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .vignette {
         padding: 0;
     }
 
-    .collapseMenu > li {
-    /* .aboutCollapseMenu > li,
-    .supportCollapseMenu > li { */
-        padding-left: 15px;
-        background-color: var(--dark-blue);
+    .vignette:hover {
+        background-color: transparent;
     }
 
-    .linkMenu > .collapseMenu,
-    .linkMenu > .aboutCollapseMenu,
-    .linkMenu > .supportCollapseMenu {
+    .actionsContainer {
+        padding: 25px 15px 15px;
+        border-top: 1px solid var(--ligthGray);
+    }
+
+    .actions {
+        color: var(--darkGrey);
+    }
+
+    .actions > p:first-child {
+        margin-top: 20px;
+    }
+    /* other menu style */
+    .services {
+        color: var(--darkGrey);
+    }
+    .info,
+    .info2 {
+        font-size: 14px;
+    }
+    .services > a > p:hover {
+        text-decoration: none;
+    }
+    .image {
+        width: 22px;
+        height: 22px;
+        background-color: var(--ligthGray);
+        border-radius: 4px;
         display: flex;
+        align-items: center;
+        padding-left: 5px;
+        margin-right: 5px;
+    }
+    .borderLeft {
+        padding-left: 15px;
+        border-left: 1px solid var(--ligthGray);
+    }
+
+    /* menu style whith title */
+    .subTitles {
+        color: var(--darkestGrey);
+    }
+    .subContainer > div {
+        padding: 25px 15px 15px;
+    }
+    .subTitles > div > h3 {
+        display: flex;
+    }
+    .subTitles > div > h3 > svg {
+        margin-right: 10px;
+    }
+    .subTitles > div > p {
+        color: var(--darkGrey);
+        font-size: 12px;
+        margin: 26px 0 22px;
+    }
+    .subTitles > div > a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+    .subTitles > div > .blueButton {
+        background-color: var(--main-color);
+        transition: 250ms;
+    }
+    .subTitles > div > .pinkButton {
+        background-color: var(--tag);
+        transition: 250ms;
+    }
+    .subTitles > div > .blueButton:hover,
+    .subTitles > div > .pinkButton:hover {
+        background-color: rgb(22, 58, 150);
+    }
+    .subColumns {
+        padding: 0;
+    }
+    .subColumns > .subColumnsK {
+        margin-top: 41px;
+    }
+    .subColumns > div > h3 {
+        color: var(--main-color);
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 22px;
+    }
+    /* subsubmenu END */
+    .secondSubmenu > .secondSubmenu_plus {
+        background-color: white;
+        color: var(--darkestGrey);
+        padding: 15px;
+    }
+
+    .secondSubmenu > .secondSubmenu_plus > div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+
+    .secondSubmenu > .secondSubmenu_plus > div > a {
+        background-color: var(--ligthGray);
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    .secondSubmenu > .secondSubmenu_plus > div > a > h6 {
+        color: var(--darkestGrey);
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .secondSubmenu > .secondSubmenu_plus > div > a > p:nth-child(2) {
+        color: var(--darkGrey);
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .secondSubmenu > .secondSubmenu_plus > div > a > p:nth-child(3) {
+        color: var(--main-color);
+        font-size: 11px;
+    }
+
+    .secondSubmenu > a > li,
+    .thirdSubmenu > li {
+        background-color: white;
+        color: var(--darkestGrey);
+        padding: 18px 15px;
+    }
+
+    .secondSubmenu > a > li > p,
+    .thirdSubmenu > li > p {
+        font-size: 13px;
+        color: var(--darkGrey);
+        padding-top: 10px;
     }
 
     .auth {
@@ -851,6 +1021,22 @@
     .auth > a:first-child:hover,
     .auth > a:nth-child(2):hover {
         background-color: var(--ligthGray);
+    }
+}
+
+@media screen and (max-width: 959px){
+    .secondSubmenu > .secondSubmenu_plus > div {
+        max-width: 422px;
+    }
+}
+
+@media screen and (max-width: 676px){
+    .subColumns {
+        grid-template-columns: 1fr;
+    }
+    .borderLeft {
+        padding-left: 0;
+        border-left: none;
     }
 }
 

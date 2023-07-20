@@ -7,6 +7,7 @@
   --main-color: #0098FF;
   --dark-blue: rgb(29, 69, 164);
   --ligthGray: #F5F5F5;
+  --white: #fff;
 
   --tag: rgb(242, 43, 122)
 }
@@ -64,6 +65,15 @@ button {
 /* toggle navigation END */
 
 @media screen and (max-width: 1253px) {
+  body {
+    overflow: hidden;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   button {
     display: block
   }
@@ -78,7 +88,6 @@ button {
   }
 
   button > span {
-    /* display: none; */
     display: flex;
     width: 28px;
     height: 2px;
@@ -103,6 +112,5 @@ button {
     transform: rotate(45deg) translate(-4px, -7px);
   }
 }
-
 
 /* body {background-color: tomato;} */
