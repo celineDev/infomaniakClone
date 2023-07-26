@@ -7,6 +7,8 @@
     font-size: 14px;
     font-weight: 600;
     margin: 0 auto;
+    z-index: 100;
+    position: relative;
 }
 
 .hide_for_desktop {
@@ -755,15 +757,15 @@
         background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
     }
 
-    /* .arrowUp {
+    .arrowUp {
         transform: rotate(180deg);
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
 
     .arrowDown {
         transform: rotate(0deg);
-        transition: all 0.3s ease;
-    } */
+        transition: all 0.5s ease;
+    }
 
     .linkMenuMobile {
         color: white;

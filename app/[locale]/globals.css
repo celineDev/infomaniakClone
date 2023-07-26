@@ -3,13 +3,17 @@
 
   --darkestGrey: #333333;
   --darkGrey: #666666;
+  --notSoDarkGrey: #999999;
 
   --main-color: #0098FF;
   --dark-blue: rgb(29, 69, 164);
   --ligthGray: #F5F5F5;
   --white: #fff;
 
-  --tag: rgb(242, 43, 122)
+  --red: #ff0000;
+  --tag: rgb(242, 43, 122);
+
+  --rainbow: radial-gradient(50% 60.5% at 92.61% 8.75%, #497FF9 0%, rgba(158, 103, 225, 0) 100%),radial-gradient(67.61% 81.81% at 5.11% 94.38%, #F28952 0%, rgba(158, 103, 225, 0) 100%),linear-gradient(67.59deg, #F2357A -4.04%, #9D66E1 70.76%);
 }
 
 * {
