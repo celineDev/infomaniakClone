@@ -1,5 +1,6 @@
 'use client';
 
+import Hero from '@/components/hero/Hero';
 import styles from './page.module.css'
 import {useTranslations} from 'next-intl';
 
@@ -8,7 +9,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h2>{t("title")}</h2>
+      <Hero />
+      <p>Don't Move</p>
     </main>
   )
 }
