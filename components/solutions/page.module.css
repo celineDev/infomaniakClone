@@ -1,0 +1,208 @@
+.solutions {
+    padding: 150px 50px 0;
+}
+
+.solutions_container {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1224px;
+    width: 100%;
+}
+
+.solution {
+    height: 628px;
+    width: 580px;
+    min-width: 300px;
+    background-color: var(--ligthGray);
+    border-radius: 8px;
+}
+
+.solution_videoContainer {
+    background: linear-gradient(102.28deg, #4EBDF5 2.6%, #1780B5 96.96%);
+    max-width: 580px;
+    width: 100%;
+    height: 268px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution_videoContainer > video {
+    width: 330px;
+    height: 225px;
+}
+
+.solution > figure > img {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.solution_infoContainer {
+    padding: 40px;
+}
+
+.solution_infoContainer > p:first-child {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 14px;
+    margin-bottom: 14px;
+    background-color: #4EBDF5;
+    border-radius: 25px;
+    color: var(--white);
+    width: fit-content;
+    height: 34px;
+}
+
+.tag {
+    background-color: var(--tag) !important;
+}
+
+.solution_infoContainer > h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 45px;
+    margin-bottom: 16px;
+}
+
+.solution_infoContainer > p:nth-child(3) {
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 24px;
+}
+
+.solution_infoContainer > button {
+    display: block;
+    padding: 18px;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 16px;
+    width: 190px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
+
+/* company  */
+.solution_company {
+    padding: 80px 80px;
+}
+
+.solution_company > p {
+    font-size: 32px;
+    text-align: center;
+}
+
+.solution_carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto 0;
+}
+
+.carousel_wrapper > .solution_carousel:nth-child(2),
+.carousel_wrapper > .solution_carousel:nth-child(3),
+.carousel_wrapper > .solution_carousel:nth-child(4),
+.carousel_wrapper > .solution_carousel:nth-child(5) {
+    display: none;
+}
+
+
+@media screen and (max-width: 1274px) {
+    .solutions {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .solutions_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .solution {
+        height: 628px;
+        max-width: 580px;
+        width: 100%;
+        background-color: var(--ligthGray);
+        border-radius: 8px;
+    }
+    .solution > figure > img {
+        border-radius: 8px 8px 0 0;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .solution_infoContainer > button {
+        width: 100%;
+    }
+
+    .carousel_wrapper > .solution_carousel:nth-child(2),
+    .carousel_wrapper > .solution_carousel:nth-child(3),
+    .carousel_wrapper > .solution_carousel:nth-child(4),
+    .carousel_wrapper > .solution_carousel:nth-child(5) {
+        display: flex;
+    }
+
+    .solutions {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .solution_company {
+        overflow: hidden;
+    }
+
+    .carousel_wrapper {
+        display: flex;
+        width: 959px;
+    }
+
+    .solution_carousel > figure {
+        padding-right: 35px;
+    }
+
+    /* Add animation keyframes */
+    @keyframes carousel {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .carousel_wrapper {
+        animation: carousel 15s linear infinite;
+    }
+}
+
+
+@media screen and (max-width: 599px) {
+    .solution {
+        height: 672px;
+    }
+    .solution_infoContainer > h3 {
+        font-size: 25px;
+        line-height: 33px;
+    }
+    .solution_videoContainer,
+    .solution > figure {
+        height: 192px;
+        overflow: hidden;
+    }
+    .solution_videoContainer > video {
+        width: 270px;
+        height: 175px;
+        margin-top: 100px;
+    }
+    .solution:first-child > .solution_infoContainer > button {
+        margin-top: 90px;
+    }
+
+    .solution > figure > img {
+        object-fit: cover;
+        width: 100%;
+    }
+}

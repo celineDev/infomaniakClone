@@ -70,7 +70,7 @@ button {
 
 @media screen and (max-width: 1253px) {
   body {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   h4 {

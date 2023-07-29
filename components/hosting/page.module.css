@@ -1,0 +1,113 @@
+.hosting {
+    background-color: var(--ligthGray);
+    padding: 80px 0;
+    color: var(--darkestGrey);
+}
+.hosting_title {
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.hosting_title > div {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin: 0 auto 30px;
+}
+.hosting_title > div > svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--main-color);
+}
+.hosting_title > h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.hosting_title > p {
+    margin: 0 auto 60px;
+    max-width: 660px;
+    width: 100%;
+}
+
+.hosting_cards {
+    margin: 0 auto;
+    max-width: 1224px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hosting_card {
+    overflow: hidden;
+    max-width: 391px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+.hosting_card > figure > img {
+    object-fit: cover;
+    width: 100%;
+}
+.hosting_info {
+    margin: 40px 30px 35px 40px;
+}
+.hosting_info > div {
+    display: flex;
+    justify-content: space-between;
+}
+.hosting_info > div > h3,
+.hosting_info > h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.hosting_info > div > p {
+    font-size: 12px;
+    background: radial-gradient(50% 60.5% at 92.61% 8.75%, #497FF9 0%, rgba(158, 103, 225, 0) 100%),radial-gradient(67.61% 81.81% at 5.11% 94.38%, #F28952 0%, rgba(158, 103, 225, 0) 100%),linear-gradient(67.59deg, #F2357A -4.04%, #9D66E1 70.76%);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 15px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.hosting_info > p {
+    margin-bottom: 16px;
+    color: var(--darkGrey);
+    line-height: 1.5;
+}
+.hosting_info > a {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 959px) {
+    .hosting_title > h2 {
+        font-size: 30px;
+    }
+    .hosting_info > div > p {
+        height: 25px;
+    }
+    .hosting_info > div > h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .hosting_card {
+        max-width: 100%;
+        min-width: 300px;
+        margin: 0 15px;
+    }
+}
