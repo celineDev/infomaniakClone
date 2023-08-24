@@ -1,0 +1,125 @@
+/* 1920/1311 */
+.ecology {
+    position: relative;
+    color: var(--white);
+}
+.ecology_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ecology_textContainer {
+    position: relative;
+    background: linear-gradient(180deg, rgba(62, 142, 118, 0.8) 0%, rgba(48, 116, 79) 100%);
+    height: 1311px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 80px 100px;
+    max-width: 850px;
+    width: 100%;
+    margin-left: auto;
+}
+
+.ecology_textContainer > div {
+    max-width: 460px;
+}
+
+.ecology_title > figure {
+    background-color: var(--white);
+    fill: rgba(62, 142, 118, 0.8);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.ecology_title > figure > svg {
+    width: 24px;
+    height: 24px;
+}
+.ecology_title > blockquote {
+    font-size: 45px;
+    line-height: 1.2;
+}
+.ecology_title > blockquote > svg {
+    fill: var(--white);
+    width: 35px;
+    height: 35px;
+}
+.ecology_title > blockquote > svg:first-child {
+    margin-right: 10px;
+}
+.ecology_title > blockquote > svg:nth-child(2) {
+    margin-left: 10px;
+}
+
+.ecology_title > blockquote > figure {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    margin: 25px 0 80px;
+}
+.ecology_title > blockquote > figure > img {
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.ecology_title > blockquote > figure > figcaption {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ecology_textBlockSm {
+    padding: 0 0 25px;
+    margin: 0 0 25px;
+    max-width: 450px;
+    width: 100%;
+}
+.ecology_textBlockSm:not(:nth-child(4)) {
+    border-bottom: 1px solid rgba(51, 51, 51, .5);
+}
+.ecology_textBlockSm > h4 {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: var(--white);
+}
+.ecology_textBlockSm > p {
+    line-height: 1.5;
+    opacity: .8;
+}
+
+.ecology_button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 20px 0;
+    background-color: rgba(33, 69, 50, .8);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    height: 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ecology_iso {
+    margin-top: 24px;
+}
+.ecology_iso > img {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 599px) {
+    .ecology_textContainer {
+        padding: 80px 25px;
+    }
+    .ecology_title > blockquote {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .ecology_textBlockSm > h4 {
+        font-size: 16px;
+    }
+}

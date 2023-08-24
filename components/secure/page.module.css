@@ -1,0 +1,119 @@
+.secure {
+    margin: 150px 0 0;
+    padding: 0 25px;
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    position: relative;
+}
+.secure_container {
+    padding: 80px 25px 80px 0;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.secure_textBlock {
+    max-width: 521px;
+    width: 100%;
+}
+.secure_textBlock > h3 {
+    margin: 30px 0 80px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.secure_textBlockSm {
+    padding: 0 0 25px;
+    margin: 0 0 25px;
+    max-width: 450px;
+    width: 100%;
+}
+.secure_textBlockSm:not(:last-child) {
+    border-bottom: 1px solid rgba(51, 51, 51, .5);
+}
+.secure_textBlockSm > h4 {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: var(--white);
+}
+.secure_textBlockSm > p {
+    line-height: 1.5;
+    opacity: .8;
+}
+.secure_textBlockSm:last-child > p {
+    margin-bottom: 15px;
+}
+.secure_textBlockSm > figure {
+    margin-top: 15px;
+}
+.secure_svg {
+    background-color: var(--white);
+    fill: var(--main-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secure_svg > svg {
+    width: 24px;
+    height: 24px;
+}
+
+.secure_machine {
+    position: relative;
+}
+
+.secure_machine > img {
+    position: absolute;
+    top: -459px;
+    left: 560px;
+}
+
+
+@media screen and (max-width: 959px) {
+    .secure_textBlock {
+        max-width: 810px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .secure_container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .secure_textBlock > h3 {
+        font-size: 45px;
+        line-height: 1.2;
+    }
+    .secure_machine > img {
+        position: initial;
+        object-fit: cover;
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 40px;
+    }
+    .secure_textBlockSm {
+        max-width: 810px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .secure_textBlock > h3 {
+        font-size: 30px;
+    }
+    .secure {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .secure_container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .secure_machine > img {
+        min-width: 320px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

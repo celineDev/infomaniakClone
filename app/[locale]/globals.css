@@ -6,8 +6,11 @@
   --notSoDarkGrey: #999999;
 
   --main-color: #0098FF;
+  --secondary-blue: rgb(44, 104, 223);
   --dark-blue: rgb(29, 69, 164);
+  --noSoLigthGray: #ebebebeb;
   --ligthGray: #F5F5F5;
+  --domain-Secondary: #F2F4F6;
   --white: #fff;
 
   --red: #ff0000;
@@ -27,7 +30,7 @@ body {
   max-width: 100vw;
   height: 100vh;
   overflow: auto;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 a {
@@ -117,4 +120,7 @@ button {
   }
 }
 
-/* body {background-color: tomato;} */
+@media screen and (max-width: 959px) {}
+/* 1150-776 */
+
+/* with1250 image 800*591 */
