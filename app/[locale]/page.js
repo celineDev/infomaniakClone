@@ -7,6 +7,9 @@ import Features from '@/components/features/Features';
 import Secure from '@/components/secure/Secure';
 import Expertise from '@/components/expertise/Expertise';
 import Ecology from '@/components/ecology/Ecology';
+import Services from '@/components/services/Services';
+import Newsletter from '@/components/newsletter/Newsletter';
+import Support from '@/components/support/Support';
 
 import styles from './page.module.css'
 import {useTranslations} from 'next-intl';
@@ -20,9 +23,12 @@ export default function Home() {
       <Solutions />
       <Hosting />
       {/* <Features /> */}
-     <Secure />
-     <Expertise />
+      <Secure />
+      <Expertise />
       <Ecology />
+      <Services />
+      <Newsletter />
+      <Support />
       <p>Don't Move</p>
     </main>
   )

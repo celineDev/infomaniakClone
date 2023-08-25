@@ -1,0 +1,109 @@
+.support {
+    padding: 350px 25px 150px;
+    margin: -200px 0 -5px;
+    background-color: var(--domain-Secondary);
+    position: relative;
+    z-index: -10;
+}
+.support_banner > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.supportContainer {
+    max-width: 1224px;
+    width: 100%;
+    padding-top: 150px;
+    margin: 0 auto;
+}
+.supportContainer > div {
+    max-width: 449px;
+    min-width: 320px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+/* logo  */
+.supportContainer > div > figure {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.supportContainer > div > figure > svg {
+    fill: var(--main-color);
+    width: 20px;
+    height: 20px;
+}
+/* title  */
+.supportContainer > div > h3 {
+    font-size: 32px;
+    margin-top: 30px;
+    color: var(--darkestGrey);
+    font-weight: 500;
+    line-height: 1.4;
+}
+.supportContainer > div > p {
+    max-width: 349px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+    color: var(--darkGrey);
+    line-height: 1.6;
+}
+/* assistance */
+.supportAssistance {
+    margin-top: 40px;
+}
+.supportAssistance > figure {
+    display: flex;
+    margin-top: 20px;
+    color: var(--main-color);
+}
+.supportAssistance > figure > svg {
+    fill: var(--main-color);
+    width: 20px;
+    height: 20px;
+}
+.supportAssistance > figure > figcaption {
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 959px) {
+    .support {
+        padding-top: 150px;
+        display: block;
+        padding-bottom: 0;
+    }
+    .supportContainer {
+        text-align: center;
+        max-width: 100%;
+    }
+    .supportContainer > div {
+        margin: 0 auto;
+    }
+    .supportContainer > div > figure {
+        margin: 0 auto;
+    }
+    .support_banner > img {
+        object-fit: cover;
+        min-width: 320px;
+        width: 100%;
+        position: relative;
+    }
+    .supportContainer > div > p {
+        max-width: 100%
+    }
+    .supportAssistance > figure {
+        justify-content: center;
+    }
+    .supportAssistance > figure > figcaption {
+        margin-left: 10px;
+    }
+
+}

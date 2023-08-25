@@ -1026,12 +1026,6 @@
     }
 }
 
-@media screen and (max-width: 959px){
-    .secondSubmenu > .secondSubmenu_plus > div {
-        max-width: 422px;
-    }
-}
-
 @media screen and (max-width: 676px){
     .subColumns {
         grid-template-columns: 1fr;

@@ -1,0 +1,116 @@
+.services {
+    padding: 140px 25px;
+    color: var(--darkestGrey);
+}
+.services_title {
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.services_title > div {
+    background-color: var(--ligthGray);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin: 0 auto 30px;
+}
+.services_title > div > svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--main-color);
+}
+.services_title > h2 {
+    font-size: 45px;
+    margin: 30px auto 30px;
+    font-weight: 400;
+    max-width: 500px;
+    width: 100%;
+}
+.services_title > a {
+    color: var(--main-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.service_cards {
+    margin: 0 auto;
+    max-width: 1224px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.service_card {
+    overflow: hidden;
+    max-width: 391px;
+    width: 100%;
+    background-color: var(--ligthGray);
+    border-radius: 8px;
+}
+.service_card > figure > img {
+    object-fit: cover;
+    width: 100%;
+}
+.service_info {
+    margin: 40px 30px 35px 40px;
+}
+
+.service_info > p {
+    background-color: var(--main-color);
+    color: var(--white);
+    width: fit-content;
+    padding: 3px 15px;
+    margin-bottom: 23px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+.service_info > h4 {
+    color: var(--darkestGrey);
+    font-weight: 600;
+    font-size: 16px;
+}
+/* 600*  */
+
+@media screen and (max-width: 959px) {
+    .service_card > figure > img {
+        height: 310px;
+    }
+    .service_cards {
+        gap: 0;
+    }
+    .service_card {
+        height: 450px;
+        max-width: 600px;
+        min-width: 300px;
+    }
+
+    .service_card {
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    .service_info {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .services {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .services_title > h2 {
+        font-size: 30px;
+    }
+    .service_card {
+        max-width: 100%;
+        min-width: 300px;
+    }
+}
