@@ -10,6 +10,7 @@ import Ecology from '@/components/ecology/Ecology';
 import Services from '@/components/services/Services';
 import Newsletter from '@/components/newsletter/Newsletter';
 import Support from '@/components/support/Support';
+import Footer from '@/components/footer/Footer';
 
 import styles from './page.module.css'
 import {useTranslations} from 'next-intl';
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-       <Hero />
+      <Hero />
       <Solutions />
       <Hosting />
       {/* <Features /> */}
@@ -29,7 +30,7 @@ export default function Home() {
       <Services />
       <Newsletter />
       <Support />
-      <p>Don't Move</p>
+      <Footer />
     </main>
   )
 }

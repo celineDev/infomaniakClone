@@ -1,0 +1,423 @@
+.footer {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #2D6AE0 0%, #1D50D5 100%),#0033C2;
+}
+.footer_container {
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.footer_container > div {
+    display: flex;
+}
+
+/* logo  */
+.footer_logo > img {
+    border-radius: 4px
+}
+
+/* categories  */
+.footer_categories {
+    display: flex;
+    justify-content: space-between;
+    max-width: 796px;
+    width: 100%;
+}
+.footer_categories > div {
+    color: var(--white);
+    padding-left: 25px;
+}
+.footer_categories > div > h3 {
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+.footer_categories > div > ul {
+    font-size: 14px;
+}
+.footer_categories > div > ul > li {
+    line-height: 1.3;
+}
+.footer_categories > div > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* form */
+.footer_form{
+    color: var(--white);
+    max-width: 390px;
+    width: 100%;
+    padding-left: 25px;
+}
+.footer_form > h3 {
+    font-weight: normal;
+    padding: 25px 0 15px;
+}
+.footer_form > form > div {
+    max-width: 100%;
+    position: relative;
+}
+.footer_form > form > div > input[type="text"] {
+    padding: 0 15px;
+    max-width: 480px;
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--darkestGrey);
+    border: none;
+}
+.footer_form > form > div > input::placeholder {
+    font-size: 16px;
+    opacity: .8;
+}
+.footer_button {
+    padding: 15px 10px 0;
+}
+.footer_button > button {
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 0 4px 4px 0;
+    color: var(--white);
+    height: 60px;
+    font-size: 14px;
+    width: 123px;
+    cursor: not-allowed;
+}
+
+/* checkbox */
+.footer_checkbox {
+    position: relative;
+    display: flex;
+    margin-left: 5px;
+}
+.footer_checkbox > input[type=checkbox] {
+    visibility: hidden;
+}
+.footer_checkbox > span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: 2px solid var(--white);
+}
+.footer_checkbox > figure > svg {
+    visibility: hidden;
+    background-color: #fff;
+    fill: var(--secondary-blue);
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+.footer_checkbox > label {
+    font-size: 12px;
+}
+.footer_checkbox > label > a {
+    text-decoration: underline;
+}
+
+/* others */
+.footer_others{
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    grid-gap: 25px;
+}
+.footer_others > figure > img {
+    object-fit: cover;
+    width: 100%;
+}
+
+/* copyright */
+.footer_copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--white);
+    font-size: 14px;
+    max-width: 690px;
+    width: 100%;
+}
+.footer_copyright > p {
+    font-weight: 600;
+}
+.footer_copyright > p::after,
+.footer_copyright > a:not(:last-child)::after {
+    content: " - ";
+    margin: 0 5px;
+}
+
+/* social  */
+.footer_social {
+    max-width: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_social > a > figure> svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--white);
+}
+
+/* global */
+.footer_others,
+.footer_copyright,
+.footer_social {
+    padding-top: 30px;
+}
+
+.footer_logo,
+.footer_categories,
+.footer_form {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding-bottom: 60px;
+}
+
+
+
+@media screen and (max-width: 959px) {
+    .footer {
+        padding: 50px 0;
+    }
+
+    /* logos  */
+    .footer_logosContainer {
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+    .footer_logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 220px;
+        width: 100%;
+    }
+    .footer_logo {
+        padding-right: 20px;
+    }
+
+    /* others */
+    .footer_others{
+        max-width: 274px;
+    }
+
+    /* form */
+    .footer_container > .footer_form {
+        display: initial;
+    }
+    .footer_form {
+        max-width: 100%;
+        min-width: 300px;
+        padding-left: 0;
+    }
+    .footer_form > h3 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer_form > form > div {
+        max-width: 423px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer_form > form > div:first-child {
+        padding: 15px 0;
+    }
+    .footer_form > form > div > input {
+        max-width: 310px;
+    }
+    .footer_button > button {
+        top: 15px;
+    }
+    .footer_form > form > .footer_checkbox {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        padding-bottom: 30px;
+    }
+
+    /* copyright */
+    .footer_copyright {
+        max-width: 451px;
+        margin: 0 auto;
+    }
+
+    /* globals  */
+    .footer_logo,
+    .footer_categories,
+    .footer_form {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer_others,
+    .footer_copyright,
+    .footer_social {
+        padding-top: 0;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 599px) {
+    .footer_container {
+        min-width: 300px;
+    }
+    .footer_logo{
+        padding-bottom: 40px;
+    }
+    .footer_form > h3 {
+        text-align: left;
+    }
+    .footer_form > form > div {
+        max-width: 403px;
+        width: 100%;
+    }
+    .footer_button > button {
+        font-size: 14px;
+        width: 93px;
+    }
+    .footer_button > button > figure > svg {
+        fill: var(--white);
+        width: 25px;
+        height: 25px;
+        transform: rotate(45deg);
+    }
+    .footer_form > form > .footer_checkbox {
+        max-width: 350px;
+        padding-bottom: 25px;
+        border-bottom: none;
+    }
+
+    /* others */
+    .footer_others {
+        max-width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* social  */
+    .footer_social {
+        max-width: 100%;
+        justify-content: center;
+        padding: 40px 0 60px;
+        gap: 20px;
+    }
+    .footer_social > a > figure> svg {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* categories only  */
+@media screen and (max-width: 959px) {
+    .footer_container > div:nth-child(2) {
+        display: initial;
+    }
+    .footer_categories > div {
+        padding-left: 0;
+    }
+    .footer_categories > div > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        padding-bottom: 12px;
+        margin: 6px 0;
+        height: 49px;
+    }
+    .footer_categories > div > div {
+        fill: var(--white);
+    }
+    .footer_categories > div > ul > li {
+        padding-bottom: 20px;
+    }
+    .arrowUp {
+        transform: rotate(180deg);
+        transition: all 0.5s ease;
+    }
+    .arrowDown {
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+    }
+
+    /* animaitions */
+    .link {
+        max-height: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .link1 {
+        animation: infomaniak 300ms linear;
+        animation-fill-mode: forwards;
+    }
+    .link2 {
+        animation: support 300ms linear;
+        animation-fill-mode: forwards;
+    }
+    .link3 {
+        animation: partenariats 300ms linear;
+        animation-fill-mode: forwards;
+    }
+    .link4 {
+        animation: ecologie 300ms linear;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+@keyframes infomaniak {
+    0% {
+        height: 0px;
+    }
+    100% {
+        max-height: 267px;
+        height: 100%;
+    }
+}
+@keyframes support {
+    0% {
+        height: 0px;
+    }
+    100% {
+        max-height: 229px;
+        height: 100%;
+    }
+}
+@keyframes partenariats {
+    0% {
+        height: 0px;
+    }
+    100% {
+        max-height: 152px;
+        height: 100%;
+    }
+}
+@keyframes ecologie {
+    0% {
+        height: 0px;
+    }
+    100% {
+        max-height: 76px;
+        height: 100%;
+    }
+}
