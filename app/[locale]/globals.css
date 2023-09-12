@@ -8,9 +8,11 @@
   --main-color: #0098FF;
   --secondary-blue: rgb(44, 104, 223);
   --dark-blue: rgb(29, 69, 164);
+  --darker-blue: #163A96;
   --noSoLigthGray: #ebebebeb;
   --ligthGray: #F5F5F5;
   --domain-Secondary: #F2F4F6;
+  --domain-Tertiary: #D0D0D0;
   --white: #fff;
 
   --red: #ff0000;
@@ -59,10 +61,6 @@ h5 {
 h6 {
   font-size: 16px;
   font-weight: 500;
-}
-
-header {
-  border-bottom: 1px solid black;
 }
 
 button {

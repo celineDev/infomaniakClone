@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <Solutions />
       <Hosting />
-      {/* <Features /> */}
+      <Features />
       <Secure />
       <Expertise />
       <Ecology />
