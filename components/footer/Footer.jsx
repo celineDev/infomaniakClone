@@ -2,15 +2,57 @@ import React, { useEffect, useState } from 'react'
 import styles from './page.module.css'
 
 const Footer = () => {
+    const Links = [
+        {
+            id: 1,
+            title: 'Infomaniak',
+            elements: [
+                'A porpos d\'Infomaniak',
+                'Infomaniak recrute',
+                'Presse et médias',
+                'Blog d\'infomaniak',
+                'Tous les certificats',
+                'Impressum',
+                'Bug Bounty',
+            ]
+        },
+        {
+            id: 2,
+            title: 'Support',
+            elements: [
+                'Assistance 7/7',
+                'FAQ et Guides',
+                'Support Premium',
+                'Contact commercial',
+                'API REST',
+                'Signaler un abus',
+            ]
+        },
+        {
+            id: 3,
+            title: 'Partenariats',
+            elements: [
+                'Devenir revendeur',
+                'Programme d\'affiliation',
+                'Annuaire partenaires',
+                'Appel d\'offres',
+            ]
+        },
+        {
+            id: 4,
+            title: 'Ecologie',
+            elements: [
+                'Hébergeur écologique',
+                'Certificats & Récompenses',
+            ]
+        },
+    ]
     const [windowWidth, setWindowWidth] = useState(false)
     const [isVisible, setIsVisible] = useState(false)
-    const [isLinkOpen, setIsLinkOpen] = useState({
-        link1: false,
-        link2: false,
-        link3: false,
-        link4: false
-    })
+    const [rotateState, setRotateState] = useState({});
+    const [menuOpen, setIsMenuOpen] = useState({})
 
+    // screen resize
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth)
@@ -24,15 +66,29 @@ const Footer = () => {
         }
     }, [])
 
+    // form validation
     const checked = () => {
         setIsVisible((prev) => !prev)
     }
 
-    const toggleLink = (link) => {
-        setIsLinkOpen(prev => ({
+    const handleMenu = (id) => {
+        setIsMenuOpen((prev) => ({
             ...prev,
-            [link]: !prev[link]
+            [id]: !prev[id],
         }))
+    }
+
+    // rotate arrows
+    const rotateArrows = (id) => {
+        const updatedRotateState = { ...rotateState }
+
+        if (updatedRotateState[id]) {
+            delete updatedRotateState[id]
+        } else {
+            updatedRotateState[id] = true
+        }
+
+        setRotateState(updatedRotateState)
     }
 
     return (
@@ -45,45 +101,16 @@ const Footer = () => {
                     </figure>
 
                     <div className={styles.footer_categories}>
-                        <div>
-                            <h3>Infomaniak</h3>
-                            <ul>
-                                <li><a href="#">A porpos d'Infomaniak</a></li>
-                                <li><a href="#">Infomaniak recrute</a></li>
-                                <li><a href="#">Presse et médias</a></li>
-                                <li><a href="#">Blog d'infomaniak</a></li>
-                                <li><a href="#">Tous les certificats</a></li>
-                                <li><a href="#">Impressum</a></li>
-                                <li><a href="#">Bug Bounty</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Support</h3>
-                            <ul>
-                                <li><a href="#">Assistance 7/7</a></li>
-                                <li><a href="#">FAQ et Guides</a></li>
-                                <li><a href="#">Support Premium</a></li>
-                                <li><a href="#">Contact commercial</a></li>
-                                <li><a href="#">API REST</a></li>
-                                <li><a href="#"></a>Signaler un abus</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Partenariats</h3>
-                            <ul>
-                                <li><a href="#">Devenir revendeur</a></li>
-                                <li><a href="#">Programme d'affiliation</a></li>
-                                <li><a href="#">Annuaire partenaires</a></li>
-                                <li><a href="#">Appel d'offres</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Ecologie</h3>
-                            <ul>
-                                <li><a href="#">Hébergeur écologique</a></li>
-                                <li><a href="#">Certificats & Récompenses</a></li>
-                            </ul>
-                        </div>
+                        {Links.map(link => (
+                            <div key={link.id}>
+                                <h3>{link.title}</h3>
+                                <ul>
+                                    {link.elements.map((element, index) => (
+                                        <li key={index}><a href="#">{element}</a></li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
 
                     <div className={styles.footer_form}>
@@ -216,89 +243,26 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.footer_categories}>
-                    <div>
-                        <div onClick={() => toggleLink('link1')}>
-                            <h3>Infomaniak</h3>
-                            <figure>
-                                {!isLinkOpen.link1 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
+                    {Links.map(link => (
+                        <div key={link.id}>
+                            <div onClick={() => {handleMenu(link.id), rotateArrows(link.id)}}>
+                                <h3>{link.title}</h3>
+                                <figure>
+                                    {!rotateState[link.id] ? (
+                                        <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                                    ) : (
+                                        <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                                    )}
                                 </figure>
+                            </div>
+
+                            <ul className={menuOpen[link.id] ? styles.link : ""}>
+                                {menuOpen[link.id] && link.elements.map((element, index) => ((
+                                    <li key={index}><a href="#">{element}</a></li>
+                                )))}
+                            </ul>
                         </div>
-                        {isLinkOpen.link1 && (
-                        <ul className={`${styles.link} ${styles.link1}`}>
-                            <li><a href="#">A porpos d'Infomaniak</a></li>
-                            <li><a href="#">Infomaniak recrute</a></li>
-                            <li><a href="#">Presse et médias</a></li>
-                            <li><a href="#">Blog d'infomaniak</a></li>
-                            <li><a href="#">Tous les certificats</a></li>
-                            <li><a href="#">Impressum</a></li>
-                            <li><a href="#">Bug Bounty</a></li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                    <div onClick={() => toggleLink('link2')}>
-                        <h3>Support</h3>
-                            <figure>
-                                {!isLinkOpen.link2 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                                </figure>
-                        </div>
-                        {isLinkOpen.link2 && (
-                        <ul className={`${styles.link} ${styles.link2}`}>
-                            <li><a href="#">Assistance 7/7</a></li>
-                            <li><a href="#">FAQ et Guides</a></li>
-                            <li><a href="#">Support Premium</a></li>
-                            <li><a href="#">Contact commercial</a></li>
-                            <li><a href="#">API REST</a></li>
-                            <li><a href="#"></a>Signaler un abus</li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                    <div onClick={() => toggleLink('link3')}>
-                        <h3>Partenariats</h3>
-                            <figure>
-                                {!isLinkOpen.link3 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                                </figure>
-                        </div>
-                        {isLinkOpen.link3 && (
-                        <ul className={`${styles.link} ${styles.link3}`}>
-                            <li><a href="#">Devenir revendeur</a></li>
-                            <li><a href="#">Programme d'affiliation</a></li>
-                            <li><a href="#">Annuaire partenaires</a></li>
-                            <li><a href="#">Appel d'offres</a></li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                        <div onClick={() => toggleLink('link4')}>
-                            <h3>Ecologie</h3>
-                            <figure>
-                                {!isLinkOpen.link4 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                            </figure>
-                        </div>
-                        {isLinkOpen.link4 && (
-                        <ul className={`${styles.link} ${styles.link4}`}>
-                            <li><a href="#">Hébergeur écologique</a></li>
-                            <li><a href="#">Certificats & Récompenses</a></li>
-                        </ul>
-                        )}
-                    </div>
+                    ))}
                 </div>
 
                 <div className={styles.footer_form}>
@@ -349,89 +313,26 @@ const Footer = () => {
                 </figure>
 
                 <div className={styles.footer_categories}>
-                    <div>
-                        <div onClick={() => toggleLink('link1')}>
-                            <h3>Infomaniak</h3>
-                            <figure>
-                                {!isLinkOpen.link1 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
+                    {Links.map(link => (
+                        <div key={link.id}>
+                            <div onClick={() => {handleMenu(link.id), rotateArrows(link.id)}}>
+                                <h3>{link.title}</h3>
+                                <figure>
+                                    {!rotateState[link.id] ? (
+                                        <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                                    ) : (
+                                        <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                                    )}
                                 </figure>
+                            </div>
+
+                            <ul className={menuOpen[link.id] ? styles.link : ""}>
+                                {menuOpen[link.id] && link.elements.map((element, index) => ((
+                                    <li key={index}><a href="#">{element}</a></li>
+                                )))}
+                            </ul>
                         </div>
-                        {isLinkOpen.link1 && (
-                        <ul className={`${styles.link} ${styles.link1}`}>
-                            <li><a href="#">A porpos d'Infomaniak</a></li>
-                            <li><a href="#">Infomaniak recrute</a></li>
-                            <li><a href="#">Presse et médias</a></li>
-                            <li><a href="#">Blog d'infomaniak</a></li>
-                            <li><a href="#">Tous les certificats</a></li>
-                            <li><a href="#">Impressum</a></li>
-                            <li><a href="#">Bug Bounty</a></li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                    <div onClick={() => toggleLink('link2')}>
-                        <h3>Support</h3>
-                            <figure>
-                                {!isLinkOpen.link2 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                                </figure>
-                        </div>
-                        {isLinkOpen.link2 && (
-                        <ul className={`${styles.link} ${styles.link2}`}>
-                            <li><a href="#">Assistance 7/7</a></li>
-                            <li><a href="#">FAQ et Guides</a></li>
-                            <li><a href="#">Support Premium</a></li>
-                            <li><a href="#">Contact commercial</a></li>
-                            <li><a href="#">API REST</a></li>
-                            <li><a href="#"></a>Signaler un abus</li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                    <div onClick={() => toggleLink('link3')}>
-                        <h3>Partenariats</h3>
-                            <figure>
-                                {!isLinkOpen.link3 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                                </figure>
-                        </div>
-                        {isLinkOpen.link3 && (
-                        <ul className={`${styles.link} ${styles.link3}`}>
-                            <li><a href="#">Devenir revendeur</a></li>
-                            <li><a href="#">Programme d'affiliation</a></li>
-                            <li><a href="#">Annuaire partenaires</a></li>
-                            <li><a href="#">Appel d'offres</a></li>
-                        </ul>
-                        )}
-                    </div>
-                    <div>
-                        <div onClick={() => toggleLink('link4')}>
-                            <h3>Ecologie</h3>
-                            <figure>
-                                {!isLinkOpen.link4 ? (
-                                    <svg  className={styles.arrowDown} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                ) : (
-                                    <svg  className={styles.arrowUp} xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                                )}
-                            </figure>
-                        </div>
-                        {isLinkOpen.link4 && (
-                        <ul className={`${styles.link} ${styles.link4}`}>
-                            <li><a href="#">Hébergeur écologique</a></li>
-                            <li><a href="#">Certificats & Récompenses</a></li>
-                        </ul>
-                        )}
-                    </div>
+                    ))}
                 </div>
 
                 <div className={styles.footer_form}>
