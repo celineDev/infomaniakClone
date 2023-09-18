@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "title": "Infomaniak",
+        "elements": [
+            "A porpos d'Infomaniak",
+            "Infomaniak recrute",
+            "Presse et médias",
+            "Blog d'infomaniak",
+            "Tous les certificats",
+            "Impressum",
+            "Bug Bounty"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Support",
+        "elements": [
+            "Assistance 7/7",
+            "FAQ et Guides",
+            "Support Premium",
+            "Contact commercial",
+            "API REST",
+            "Signaler un abus"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Partenariats",
+        "elements": [
+            "Devenir revendeur",
+            "Programme d'affiliation",
+            "Annuaire partenaires",
+            "Appel d'offres"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Ecologie",
+        "elements": [
+            "Hébergeur écologique",
+            "Certificats & Récompenses"
+        ]
+    }
+]

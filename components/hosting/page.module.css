@@ -25,7 +25,7 @@
     height: 30px;
     fill: var(--main-color);
 }
-.hosting_title > h2 {
+.hosting_title > h1 {
     font-size: 45px;
     margin-bottom: 30px;
     font-weight: 500;
@@ -55,7 +55,8 @@
 }
 .hosting_card > figure > img {
     object-fit: cover;
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 .hosting_info {
     margin: 40px 30px 35px 40px;
@@ -93,7 +94,7 @@
 
 
 @media screen and (max-width: 959px) {
-    .hosting_title > h2 {
+    .hosting_title > h1 {
         font-size: 30px;
     }
     .hosting_info > div > p {

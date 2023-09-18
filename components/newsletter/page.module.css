@@ -19,8 +19,9 @@
     text-align: center;
 }
 
-.newsletter_titles > p:first-child {
+.newsletter_titles > h3 {
     font-size: 32px;
+    font-weight: 500;
     margin-bottom: 16px;
 }
 

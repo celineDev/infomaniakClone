@@ -346,9 +346,11 @@
 }
 
 .svgJCloud,
-.svgRadio,
 .svgEvents {
     fill: rgb(40, 115, 231);
+}
+.svgRadio {
+    fill: rgb(237, 161, 47)
 }
 
 .svgBackup {

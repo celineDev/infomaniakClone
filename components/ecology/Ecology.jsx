@@ -57,8 +57,8 @@ const Ecology = () => {
                         <Link  className={styles.ecology_link} href="#">Pourquoi choisir infomaniak ? →</Link>
 
                         <figure className={styles.ecology_iso}>
-                            <Image src="/ecology/ecology_iso_01.png" alt="ISO" width={63} height={75} />
-                            <Image src="/ecology/ecology_iso_02.png" alt="ISO" width={63} height={75} />
+                            <Image src="/ecology/ecology_iso_01.png" alt="ISO 14001" width={63} height={75} />
+                            <Image src="/ecology/ecology_iso_02.png" alt="ISO 50001" width={63} height={75} />
                         </figure>
 
                     </div>

@@ -9,7 +9,7 @@ const Solutions = () => {
                 <article className={styles.solution}>
                     <div className={styles.solution_videoContainer}>
                         <video controls>
-                            <source src="/videos/ma_video.mp4" type="video/mp4" />
+                            <source src="/solutions/Présentation dinfomaniak, alternative européenne aux GAFAM.mp4" type="video/mp4" />
                             <source src="/videos/ma_video.webm" type="video/webm" />
                             <source src="/videos/ma_video.ogv" type="video/ogg" />
                             Votre navigateur ne prend pas en charge la vidéo.
@@ -25,7 +25,7 @@ const Solutions = () => {
 
                 <article className={styles.solution}>
                     <figure>
-                        <Image src="/solutions/solution_02.png" alt="Collaborez au sein de votre entreprise dans un cloud éthique" height={268} width={580} />
+                        <Image src="/solutions/solution_02.png" alt="Collaborez pour un cloud éthique" height={268} width={580} />
                     </figure>
                     <div className={styles.solution_infoContainer}>
                         <p className={styles.tag}>Nouveau</p>
@@ -37,7 +37,7 @@ const Solutions = () => {
             </div>
 
             <div className={styles.solution_company}>
-                <p>Ils nous font confiance</p>
+                <h3>Ils nous font confiance</h3>
                 <div className={styles.carousel_wrapper}>
                     <div className={styles.solution_carousel}>
                         <figure>

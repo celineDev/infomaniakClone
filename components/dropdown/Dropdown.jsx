@@ -63,7 +63,7 @@ const Dropdown = ({ currentLanguage, currentLanguageFull }) => {
     }, []);
 
     return (
-        <button onClick={() => setIsOpen((prev) => !prev)} className={styles.container}>
+        <div aria-label="Button" onClick={() => setIsOpen((prev) => !prev)} className={styles.container}>
             {windowWidth < 1253 ? (
                 <p>{currentLanguageFull}</p>
             ) : (
@@ -94,7 +94,7 @@ const Dropdown = ({ currentLanguage, currentLanguageFull }) => {
                     <li><IntlLink href="/" locale="it">{language.it}</IntlLink></li>
                 </ul>
             )}
-        </button>
+        </div>
     )
 }
 

@@ -92,8 +92,9 @@
     padding: 80px 80px;
 }
 
-.solution_company > p {
+.solution_company > h3 {
     font-size: 32px;
+    font-weight: 400;
     text-align: center;
 }
 

@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 599px) {
     .expertise_container {
-        max-width: 599;
+        max-width: 599px;
         width: 100%;
     }
     .expertise_infomaniak > p {

@@ -24,7 +24,7 @@
     height: 20px;
     fill: var(--main-color);
 }
-.services_title > h2 {
+.services_title > h3 {
     font-size: 45px;
     margin: 30px auto 30px;
     font-weight: 400;
@@ -76,7 +76,6 @@
     font-weight: 600;
     font-size: 16px;
 }
-/* 600*  */
 
 @media screen and (max-width: 959px) {
     .service_card > figure > img {
@@ -106,7 +105,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .services_title > h2 {
+    .services_title > h3 {
         font-size: 30px;
     }
     .service_card {

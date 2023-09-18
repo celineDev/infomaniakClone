@@ -10,14 +10,14 @@ const Hosting = () => {
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V352H64V64H512z"/></svg>
             </div>
-            <h2>Découvrez nos solutions de productivité et choisissez le meilleur hébergement pour vos sites et vos e-mails</h2>
+            <h1>Découvrez nos solutions de productivité et choisissez le meilleur hébergement pour vos sites et vos e-mails</h1>
             <p>Prestataire cloud majeur en Europe et développeur leader de technologies Web en Suisse, Infomaniak est une entreprise indépendante et durable en pleine croissance.</p>
         </div>
 
         <div className={styles.hosting_cards}>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_1.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_1.png" alt="service de mail" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <div>
@@ -30,7 +30,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_2.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_2.png" alt="espace de stockage" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <div>
@@ -43,7 +43,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_3.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_3.png" alt="messagerie gratuite" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Adresse mail gratuite</h3>
@@ -54,7 +54,7 @@ const Hosting = () => {
 
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_4.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_4.png" alt="réaliser votre propre site web" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Site Creator</h3>
@@ -64,7 +64,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_5.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_5.png" alt="réaliser facilement des sites web avec les technologies que vous choisissez" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Serveur Cloud Managé</h3>
@@ -74,7 +74,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_6.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_6.png" alt="Un service backup pour tout vos appareils" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Swiss Backup</h3>
@@ -85,7 +85,7 @@ const Hosting = () => {
 
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_7.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_7.png" alt="Gérer votre serveur" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>VPS Cloud</h3>
@@ -95,7 +95,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_8.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_8.png" alt="Créez vos propres environnements de développement sur mesure" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Jelastic Cloud (PaaS)</h3>
@@ -105,7 +105,7 @@ const Hosting = () => {
             </article>
             <article className={styles.hosting_card}>
                 <figure>
-                    <Image src="/hosting/hosting_9.png" alt="" width={390} height={207} />
+                    <Image src="/hosting/hosting_9.png" alt="Créez vos propres infrastucture sur mesure" width={390} height={207} />
                 </figure>
                 <div className={styles.hosting_info}>
                     <h3>Public Cloud (IaaS)</h3>
