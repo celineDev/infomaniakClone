@@ -15,7 +15,6 @@
     "next-intl": "^2.15.0-beta.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swiper": "^10.1.0",
-    "use-ripple-hook": "^1.0.22"
+    "swiper": "^10.1.0"
   }
 }
