@@ -22,6 +22,7 @@
         "signupShort": "Ein Konto aufsetzen",
         "logginShort": "Anmelden",
         "signup": "Registrierung",
-        "loggin": "Anmelden"
+        "loggin": "Anmelden",
+        "myAccount": "Mein konto"
     }
 }

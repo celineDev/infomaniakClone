@@ -22,6 +22,7 @@
         "signupShort": "Crear une cuenta",
         "logginShort": "Iniciar sesion",
         "signup": "Suscripción",
-        "loggin": "Conexión"
+        "loggin": "Conexión",
+        "myAccount": "Mi cuenta"
     }
 }

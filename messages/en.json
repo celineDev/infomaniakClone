@@ -22,6 +22,7 @@
         "signupShort": "Create an account",
         "logginShort": "Sign in",
         "signup": "Sign up",
-        "loggin": "Log in"
+        "loggin": "Log in",
+        "myAccount": "My account"
     }
 }

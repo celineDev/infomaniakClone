@@ -1,0 +1,37 @@
+.myaccount {
+    all: unset;
+    background-color: #0098FF;
+    color: #fff;
+    font-size: .875rem;
+    font-family: 'arial', sans-serif;
+    padding: .625rem 1rem;
+    border-radius: .25rem;
+    transition: 250ms;
+    cursor: pointer;
+}
+.myaccount:hover {
+    background-color: #0089e6;
+}
+
+.myaccount > svg {
+    margin: 0 .5rem 0 0;
+    fill: #fff;
+}
+
+@media screen and (max-width: 62.5rem) {
+    .myaccount {
+        background-color: #F2F4F6;
+        border-radius: 50%;
+        height: 1.125rem;
+    }
+    .myaccount:hover {
+        background-color: #F2F4F6;
+    }
+    .myaccount > svg {
+        fill: #333;
+        margin: 0;
+    }
+    .myaccount > a {
+        display: none;
+    }
+}

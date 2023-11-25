@@ -7,7 +7,7 @@
         "title": "Bonjour Monde"
     },
     "navigation": {
-        "products": "Produits",
+        "products": "Nos produits",
         "aboutus": "À propos",
         "support": "Support",
         "price": "Prix",
@@ -22,6 +22,7 @@
         "signupShort": "Créer un compte",
         "logginShort": "Se connecter",
         "signup": "Inscription",
-        "loggin": "Connexion"
+        "loggin": "Connexion",
+        "myAccount": "Mon compte"
     }
 }
