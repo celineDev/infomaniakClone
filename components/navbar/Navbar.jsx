@@ -5,12 +5,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import Search from '@/components/search/Search'
-import Dropdown from '@/components/dropdown/Dropdown'
 import styles from './page.module.css'
 import Myaccount from '../myaccount/myaccount'
 
 const Navbar = () => {
-    const t = useTranslations('lang');
     const n = useTranslations('navigation');
 
     const products = [
@@ -333,6 +331,7 @@ const Navbar = () => {
         },
     ]
 
+    const [windowWidth, setWindowWidth] = useState(0)
     const [isMenu, setIsMenu] = useState(false)
     const [isSubmenuOpen, setIsSubmenuOpen] = useState({
         products: false,
@@ -427,15 +426,30 @@ const Navbar = () => {
         rotateArrows(id)
     }
 
+    useEffect(() => {
+        // screen resize
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+        handleResize()
+
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
+
     return (
         <header className={`${styles.header} ${isMenu ? 'open' : ''}`}>
             <nav className={styles.container}>
                 <div className={styles.nav}>
 
-                    <button aria-label="Ouvrir le menu" aria-roledescription="Bouton pour ouvrir le menu et accéder au lien" onClick={handleMenu} className={styles.burgerBtn}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <button aria-label="Ouvrir le menu" aria-roledescription="Bouton pour ouvrir le menu et accéder au lien" onClick={handleMenu}>
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </button>
 
                     <p className={styles.logo}><Link href="/">infomaniak</Link></p>
@@ -548,24 +562,25 @@ const Navbar = () => {
                                 </div>
                             )}
                         </ul>
-                        <div className={styles.hide_for_mobile}>
+                        {windowWidth > 1000 ? (
                             <Search />
-                        </div>
+                        ) : (null)}
                     </div>
-                </div>
-                <div className={styles.muiBox}>
-                    {/* <Dropdown currentLanguage={t('currentLanguage')} currentLanguageFull={t('currentLanguageFull')} /> */}
-
-                    <figure className={`${styles.imgContainer} ${styles.hide_for_mobile}`}>
-                        <Image src="/pad.png" width={20} height={20} alt="menu panel" priority={true} />
-                    </figure>
-                    <Myaccount />
+                    <div className={styles.muiBox}>
+                        <figure className={`${styles.imgContainer} ${styles.hide_for_mobile}`}>
+                            <Image src="/pad.png" width={20} height={20} alt="menu panel" priority={true} />
+                        </figure>
+                        <Myaccount />
+                    </div>
                 </div>
             </nav>
 
             {isMenu && (
                 <div className={styles.nav_mobile_open}>
-                    <Search />
+                    {windowWidth > 1000 ?
+                        (null) : (
+                            <Search />
+                        )}
                     <ul ref={menuRef} className={`${styles.toggle} ${styles.toggleContainer} ${styles.hide_for_desktop}`}>
                         <li onClick={() => handleMobileMenu('products')} className={`${styles.nav_mobile} ${styles.hide_for_desktop}`}>
                             <Link href="#">{n("products")}</Link>

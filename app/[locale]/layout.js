@@ -1,4 +1,5 @@
 import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/footer/Footer';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl';
@@ -29,6 +30,7 @@ export default async function LocaleLayout({children, params: {locale}}) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar/>
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

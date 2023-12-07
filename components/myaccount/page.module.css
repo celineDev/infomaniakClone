@@ -4,10 +4,11 @@
     color: #fff;
     font-size: .875rem;
     font-family: 'arial', sans-serif;
-    padding: .625rem 1rem;
+    padding: .625rem .9375rem;
     border-radius: .25rem;
     transition: 250ms;
     cursor: pointer;
+    width: 6.75rem;
 }
 .myaccount:hover {
     background-color: #0089e6;
@@ -22,7 +23,9 @@
     .myaccount {
         background-color: #F2F4F6;
         border-radius: 50%;
+        width: .5rem;
         height: 1.125rem;
+        padding-right: 1.125rem;
     }
     .myaccount:hover {
         background-color: #F2F4F6;
