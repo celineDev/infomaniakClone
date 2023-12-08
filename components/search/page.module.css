@@ -1,7 +1,7 @@
 .container {
     position: absolute;
     top: 17px;
-    right: 0;
+    right: 200px;
     width: 34px;
     height: 34px;
     border-radius: 0 4px 4px 0;
@@ -63,7 +63,7 @@
 
 /* anim */
 .opened {
-    width: 100%;
+    width: calc(100% - 370px);
     background-color: var(--ligthGray);
     border: 1px solid #dfdfdfb6;
 }
