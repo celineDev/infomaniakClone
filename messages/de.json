@@ -1,28 +1,14 @@
 {
-    "Index": {
-        "title": "Hello allemand!"
-    },
     "lang": {
-        "currentLanguage": "DE",
-        "currentLanguageFull": "Deutsch"
+        "currentLanguage": "DE"
     },
     "navigation": {
         "products": "Produkte",
         "aboutus": "Über uns",
         "support": "Support",
-        "price": "Preis",
         "language": "Sprache"
     },
-    "switch": {
-        "taxes": "incl.MwSt",
-        "excl": "exkl.MwSt",
-        "incl": "incl.MwSt"
-    },
     "log": {
-        "signupShort": "Ein Konto aufsetzen",
-        "logginShort": "Anmelden",
-        "signup": "Registrierung",
-        "loggin": "Anmelden",
         "myAccount": "Mein konto"
     }
 }

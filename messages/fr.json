@@ -1,28 +1,14 @@
 {
     "lang": {
-        "currentLanguage": "FR",
-        "currentLanguageFull": "Français"
-    },
-    "Index": {
-        "title": "Bonjour Monde"
+        "currentLanguage": "FR"
     },
     "navigation": {
         "products": "Nos produits",
         "aboutus": "À propos",
         "support": "Support",
-        "price": "Prix",
         "language": "Langue"
     },
-    "switch": {
-        "taxes": "TTC",
-        "excl": "HT",
-        "incl": "TTC"
-    },
     "log": {
-        "signupShort": "Créer un compte",
-        "logginShort": "Se connecter",
-        "signup": "Inscription",
-        "loggin": "Connexion",
         "myAccount": "Mon compte"
     }
 }

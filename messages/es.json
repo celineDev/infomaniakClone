@@ -1,28 +1,14 @@
 {
     "lang": {
-        "currentLanguage": "ES",
-        "currentLanguageFull": "Español"
-    },
-    "Index": {
-        "title": "Hello spain!"
+        "currentLanguage": "ES"
     },
     "navigation": {
         "products": "Productos",
         "aboutus": "Quiénes somos",
         "support": "Soporte",
-        "price": "Precio",
         "language": "Idioma"
     },
-    "switch": {
-        "taxes": "IVA incl.",
-        "excl": "sin IVA",
-        "incl": "IVA incl."
-    },
     "log": {
-        "signupShort": "Crear une cuenta",
-        "logginShort": "Iniciar sesion",
-        "signup": "Suscripción",
-        "loggin": "Conexión",
         "myAccount": "Mi cuenta"
     }
 }

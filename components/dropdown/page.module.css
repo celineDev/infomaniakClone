@@ -1,77 +1,41 @@
 .container {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: var(--ligthGray);
-    width: 54px;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 74px;
     font-size: 14px;
-    font-weight: 700;
-    color: #666666;
-    cursor: pointer;
+    font-weight: 600;
+    color: var(--white);
 }
-
-.container > figure {
+.containerButton {
+    position: relative;
     display: flex;
-    padding-left: 5px;
+    width: 40px;
+    justify-content: space-between;
 }
-
+.containerButton > figure {
+    display: flex;
+    align-items: center;
+}
+/* dropdown list */
 .dropdownList {
     position: absolute;
-    top: 37px;
-    background-color: white;
-    width: 54px;
+    bottom: 0;
+    text-align: center;
+    width: 51px;
     font-size: 14px;
+    padding: 8px 0;
+    color: var(--darkestGrey);
+    background-color: var(--white);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
 }
-
 .dropdownList > li {
-    padding: 6px 16px;
+    padding: 6px 0;
     transition: 300ms;
 }
-
 .dropdownList > li:hover {
     padding: 6px 16px;
     background-color: var(--ligthGray);
-}
-
-.dropdownList > li:first-child {
-    padding-top: 18px;
-}
-.dropdownList > li:last-child {
-    padding-bottom: 18px;
-}
-
-@media screen and (max-width: 1253px) {
-    .container {
-        background-color: transparent;
-        width: 100px;
-        justify-content: end;
-    }
-
-    .container > figure > svg {
-        fill: white;
-    }
-
-    .container > p {
-        color: white;
-        font-size: 15px;
-    }
-
-    .dropdownList {
-        width: 90px;
-    }
-    .arrowUp {
-        transform: rotate(180deg);
-        transition: all 0.5s ease;
-    }
-
-    .arrowDown {
-        transform: rotate(0deg);
-        transition: all 0.5s ease;
-    }
 }

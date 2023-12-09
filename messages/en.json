@@ -1,28 +1,14 @@
 {
-    "Index": {
-        "title": "Hello world!"
-    },
     "lang": {
-        "currentLanguage": "EN",
-        "currentLanguageFull": "English"
+        "currentLanguage": "EN"
     },
     "navigation": {
         "products": "Products",
         "aboutus": "About us",
         "support": "Support",
-        "price": "Price",
         "language": "Language"
     },
-    "switch": {
-        "taxes": "incl.taxes",
-        "excl": "excl.taxes",
-        "incl": "incl.taxes"
-    },
     "log": {
-        "signupShort": "Create an account",
-        "logginShort": "Sign in",
-        "signup": "Sign up",
-        "loggin": "Log in",
         "myAccount": "My account"
     }
 }
